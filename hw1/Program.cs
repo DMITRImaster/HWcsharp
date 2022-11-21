@@ -100,12 +100,12 @@ else Console.WriteLine( "вы ввели число не в диапозоне!!
 //*** Home work 3!!! ***
 //Задача 19
 //Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
-/*
+
 void poli(int num)  //модуль поиска полиндрома
 {
     if (num/10000 == num%10 && num/1000%10 == num/10%10)
-    Console.WriteLine("Введеное число является полиндромом");
-   else  Console.WriteLine("Введеное число НЕ  полиндром");
+    Console.WriteLine("Введеное число является полиндромом!");
+   else  Console.WriteLine("Введеное число НЕ  полиндром!");
 }
 
 
@@ -117,7 +117,7 @@ if (curent >=10000 && curent<=99999)
 poli(curent);
 }
 else Console.WriteLine("Вы ввели не пятизначное число");
-*/
+
 
 //Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
 /*
@@ -146,11 +146,11 @@ Console.WriteLine($"Long line: {dist:f2}");// dist:f3 вывод до 3х сим
 //Задача 23
 
 //Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
-
+/*
 void cubed(int N) // Метод выводящий  таблицу кубов чисел от 1 до N
 {
     int curent=1;
-while (curent<=N) 
+    while (curent<=N) 
 
     {Console.Write($" {curent*curent*curent}, ");
     curent++;}
@@ -161,3 +161,4 @@ Console.WriteLine("Enter number N: ");
 int num = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Сubed 1..N:");
 cubed(num);
+*/
