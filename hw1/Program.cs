@@ -47,7 +47,7 @@ index=index+2;
 // *** Home work 2!!! ***
 //Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
 
-
+/*
 int second(int numdel)  //модуль вывода второй цифры трехзначного числа
 {
     //Console.WriteLine("Ваше число " + numdel);
@@ -65,11 +65,11 @@ else Console.WriteLine( "вы ввели число не в диапозоне!!
 
 
 //Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
-/*
+
 
 int ending(int numdel)  //модуль вывода второй цифры трехзначного числа
 {
-    //Console.WriteLine("Ваше число " + numdel);n
+    //Console.WriteLine("Ваше число " + numdel);
     while (numdel>1000)    numdel/=10;
     Console.WriteLine("Ваше число " + numdel);
      int new_num= numdel%10;
@@ -96,3 +96,68 @@ else Console.WriteLine($"Это не выходной день!!!");
 }
 else Console.WriteLine( "вы ввели число не в диапозоне!!! ");
 */
+
+//*** Home work 3!!! ***
+//Задача 19
+//Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+/*
+void poli(int num)  //модуль поиска полиндрома
+{
+    if (num/10000 == num%10 && num/1000%10 == num/10%10)
+    Console.WriteLine("Введеное число является полиндромом");
+   else  Console.WriteLine("Введеное число НЕ  полиндром");
+}
+
+
+Console.WriteLine("Ввведите пятизначное число: ");
+int curent=Convert.ToInt32(Console.ReadLine());
+
+if (curent >=10000 && curent<=99999)
+{
+poli(curent);
+}
+else Console.WriteLine("Вы ввели не пятизначное число");
+*/
+
+//Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+/*
+double longline(int x1, int y1, int z1, int x2, int y2, int z2)
+{
+  double  line = Math.Sqrt((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2) + (z1-z2)*(z1-z2));
+  return line;
+}
+Console.WriteLine("x1 ");
+int x1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("y1 ");
+int y1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("z1 ");
+int z1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("x2 ");
+int x2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("y2 ");
+int y2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("z2 ");
+int z2 = Convert.ToInt32(Console.ReadLine());
+
+double dist=longline(x1,y1,z1,x2,y2,z2);
+Console.WriteLine($"Long line: {dist:f2}");// dist:f3 вывод до 3х символов после запятой
+*/
+
+//Задача 23
+
+//Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+
+void cubed(int N) // Метод выводящий  таблицу кубов чисел от 1 до N
+{
+    int curent=1;
+while (curent<=N) 
+
+    {Console.Write($" {curent*curent*curent}, ");
+    curent++;}
+    Console.Write($"\b\b.");
+}
+
+Console.WriteLine("Enter number N: ");
+int num = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Сubed 1..N:");
+cubed(num);
