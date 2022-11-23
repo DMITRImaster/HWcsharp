@@ -100,7 +100,7 @@ else Console.WriteLine( "вы ввели число не в диапозоне!!
 //*** Home work 3!!! ***
 //Задача 19
 //Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
-
+/*
 void poli(int num)  //модуль поиска полиндрома
 {
     if (num/10000 == num%10 && num/1000%10 == num/10%10)
@@ -117,7 +117,7 @@ if (curent >=10000 && curent<=99999)
 poli(curent);
 }
 else Console.WriteLine("Вы ввели не пятизначное число");
-
+*/
 
 //Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
 /*
@@ -162,3 +162,80 @@ int num = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Сubed 1..N:");
 cubed(num);
 */
+
+// Home work 4!!!
+Console.WriteLine("Home work 4!!!");
+/*
+//Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+
+void stepen(int a, int b)
+{int sum=1;
+    for (int i=1; i<=b; i++)
+    sum=sum*a;
+    Console.WriteLine($"Число {a} в степени {b} = {sum}");
+}
+
+Console.WriteLine("Enter number a: ");
+int a = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter number b: ");
+int b = Convert.ToInt32(Console.ReadLine());
+
+stepen(a,b);
+
+
+//Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+Console.WriteLine();
+Console.WriteLine("Задача 27:");
+
+void NumSum(int num)
+{
+int sum=0;
+int num1=num;
+while (num>0)    
+    {sum=sum+num%10;
+    //Console.WriteLine("Остаток от деления " + num%10);
+    num/=10;
+    }
+    
+    Console.WriteLine($"sum of digits in number {num1} = {sum}");
+}
+Console.WriteLine("Enter number: ");
+int num = Convert.ToInt32(Console.ReadLine());
+
+NumSum(num);
+
+*/
+
+
+//Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран
+Console.WriteLine();
+Console.WriteLine("Задача 29:");
+
+int[] CreatNewArray(int size, int min, int max) // Ввод массива
+{
+int[] array = new int[size];
+
+for (int i=0;i<size; i++)
+    array[i]= new Random().Next(min,max+1); // (min, max+1)
+return array;
+}
+
+void ShowArray(int [] array) //Вывод массива
+{
+Console.WriteLine("Array: ");
+  for ( int i=0; i<array.Length; i++) 
+      Console.Write(array[i]+" ");
+}
+
+int size=8;
+
+ShowArray(CreatNewArray(size,-32768,32767));
+
+int [] asd=new int[5];
+ShowArray(asd);
+
+
+
+
+
+
