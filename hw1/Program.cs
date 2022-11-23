@@ -165,7 +165,7 @@ cubed(num);
 
 // Home work 4!!!
 Console.WriteLine("Home work 4!!!");
-/*
+
 //Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
 
 void stepen(int a, int b)
@@ -204,7 +204,7 @@ int num = Convert.ToInt32(Console.ReadLine());
 
 NumSum(num);
 
-*/
+//*/
 
 
 //Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран
@@ -231,8 +231,6 @@ int size=8;
 
 ShowArray(CreatNewArray(size,-32768,32767));
 
-int [] asd=new int[5];
-ShowArray(asd);
 
 
 
