@@ -161,7 +161,7 @@ Console.WriteLine("Enter number N: ");
 int num = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Сubed 1..N:");
 cubed(num);
-*/
+
 
 // Home work 4!!!
 Console.WriteLine("Home work 4!!!");
@@ -204,12 +204,12 @@ int num = Convert.ToInt32(Console.ReadLine());
 
 NumSum(num);
 
-//*/
+*/
 
 
 //Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран
-Console.WriteLine();
-Console.WriteLine("Задача 29:");
+//Console.WriteLine();
+//Console.WriteLine("Задача 29:");
 
 int[] CreatNewArray(int size, int min, int max) // Ввод массива
 {
@@ -227,11 +227,53 @@ Console.WriteLine("Array: ");
       Console.Write(array[i]+" ");
 }
 
-int size=8;
+//int size=8;
+//ShowArray(CreatNewArray(size,-32768,32767));
 
-ShowArray(CreatNewArray(size,-32768,32767));
+// Home work 5!!!
+//Задача 34
+Console.WriteLine();
+Console.WriteLine("Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.");
 
+int find_2(int [] array, int size_array) // метод поиска четных чисел
+    {
+    int n=0;
+    for (int i=0; i<size_array; i++)
+    {
+        if (array[i]%2 == 0) n++;
+    }
+    Console.WriteLine();
+    return n;
+    }
 
+Console.WriteLine("Enter size array: ");
+int size = Convert.ToInt32(Console.ReadLine());
+
+int [] array111=CreatNewArray(size,100,999);
+ShowArray(array111);
+Console.WriteLine();
+Console.Write("Кол-во четных чисел: ");
+Console.WriteLine(find_2(array111, size));
+
+// Задача 36
+Console.WriteLine("Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях");
+
+int find_36(int [] array, int size_array) // метод поиска четных чисел
+    {
+    int n=0;
+    for (int i=1; i<size_array; i+=2)
+    {
+        n=n+array[i];
+    }
+    Console.WriteLine();
+    return n;
+    }
+int [] array36=CreatNewArray(size,-100,100);
+ShowArray(array36);
+Console.WriteLine("Sum of odd elements:");
+Console.WriteLine(find_36(array36,size));
+//new Random().NextDouble();
+//Math.Round(newArray[i],3)
 
 
 
