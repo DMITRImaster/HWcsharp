@@ -232,7 +232,7 @@ Console.WriteLine("Array: ");
 
 // Home work 5!!!
 //Задача 34
-
+/*
 Console.WriteLine();
 Console.WriteLine("Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.");
 
@@ -256,7 +256,7 @@ Console.WriteLine();
 Console.Write("Кол-во четных чисел: ");
 Console.WriteLine(find_2(array111, size));
 
-/*
+
 // Задача 36
 Console.WriteLine("Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях");
 
@@ -280,7 +280,7 @@ Console.WriteLine(find_36(array36,size));
 
 //Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 
-
+/*
 Console.Write("input array_size of elements: ");
 int size = Convert.ToInt32(Console.ReadLine());
 
@@ -312,5 +312,47 @@ void arraiMinMax(int size, int min, int max)// Создание массива �
 }
 
 arraiMinMax(size,min,max);
+*/
+//Home work 6
+//Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
 
 
+void enterZ(int m)
+{
+    int n=0; 
+ 
+for (int i=0; i<m; i++)
+{
+  Console.WriteLine("input digitals: ");
+int a = Convert.ToInt32(Console.ReadLine());
+if (a>0) n++;  
+}
+Console.WriteLine("Чисел больше 0 :  "+n);
+}
+
+Console.WriteLine("input curent enter: ");
+int m = Convert.ToInt32(Console.ReadLine());
+
+enterZ(m);
+
+// Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
+/*
+
+Console.Write("input b1: ");
+double b1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("input k1: ");
+double k1 = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("input b2: ");
+double b2 = Convert.ToInt32(Console.ReadLine());
+Console.Write("input k2: ");
+double k2 = Convert.ToInt32(Console.ReadLine());
+
+void cros(double b1, double k1, double b2, double k2)
+{
+double x=(b2-b1)/(k1-k2);
+double y=k1 * x + b1;
+Console.WriteLine($" Точка пересечения двух прямых y={k1}*x + ({b1}) и y={k2}*x + ({b2}) находится в точке x= {x} ,  y = {y}"  );
+}
+cros(b1,k1,b2,k2);
+*/
