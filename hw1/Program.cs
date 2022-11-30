@@ -232,6 +232,7 @@ Console.WriteLine("Array: ");
 
 // Home work 5!!!
 //Задача 34
+
 Console.WriteLine();
 Console.WriteLine("Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.");
 
@@ -255,14 +256,15 @@ Console.WriteLine();
 Console.Write("Кол-во четных чисел: ");
 Console.WriteLine(find_2(array111, size));
 
+/*
 // Задача 36
 Console.WriteLine("Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях");
 
 int find_36(int [] array, int size_array) // метод поиска четных чисел
     {
     int n=0;
-    for (int i=1; i<size_array; i+=2)
-    {
+    for (int i=0; i<size_array; i+=2)
+    {Console.WriteLine("i=" + i);
         n=n+array[i];
     }
     Console.WriteLine();
@@ -274,8 +276,41 @@ Console.WriteLine("Sum of odd elements:");
 Console.WriteLine(find_36(array36,size));
 //new Random().NextDouble();
 //Math.Round(newArray[i],3)
+*/
+
+//Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 
 
+Console.Write("input array_size of elements: ");
+int size = Convert.ToInt32(Console.ReadLine());
 
+Console.Write("input min of elements: ");
+int min = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("input max of elements: ");
+int max = Convert.ToInt32(Console.ReadLine());
+
+void arraiMinMax(int size, int min, int max)// Создание массива и Поиск разницы Макс и мин элемента
+{
+    double[] array = new double[ size];
+	double minfind=max, maxfind=min;
+    Console.Write("Array:  ");
+	for (int i=0;i<size; i++)
+		{
+        array[i]= new Random().Next(min,max+1) + new Random().NextDouble() ;// (min, max+1)
+		//Console.Write(Math.Round(array[i],2)+" ");
+        array[i]=Math.Round(array[i],3);
+        Console.Write(array[i]+" ");
+		 if (array[i]>maxfind) maxfind=array[i];
+		 if (array[i]< minfind) minfind=array[i];
+		  
+		}
+        
+        Console.WriteLine();
+        double razn=Math.Round(maxfind-minfind,3);
+		Console.WriteLine($"Max - Min cuurent of array = {maxfind} - {minfind} = {razn}");
+}
+
+arraiMinMax(size,min,max);
 
 
