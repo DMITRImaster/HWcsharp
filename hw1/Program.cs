@@ -210,6 +210,7 @@ NumSum(num);
 //Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран
 //Console.WriteLine();
 //Console.WriteLine("Задача 29:");
+/*
 
 int[] CreatNewArray(int size, int min, int max) // Ввод массива
 {
@@ -312,7 +313,7 @@ void arraiMinMax(int size, int min, int max)// Создание массива �
 }
 
 arraiMinMax(size,min,max);
-*/
+
 //Home work 6
 //Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
 
@@ -336,7 +337,7 @@ int m = Convert.ToInt32(Console.ReadLine());
 enterZ(m);
 
 // Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
-/*
+
 
 Console.Write("input b1: ");
 double b1 = Convert.ToInt32(Console.ReadLine());
@@ -356,3 +357,112 @@ Console.WriteLine($" Точка пересечения двух прямых y={
 }
 cros(b1,k1,b2,k2);
 */
+
+
+//Home work7
+//Задача 47. Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
+
+/*
+
+double[,] CreatArray2double(int row, int column, int min, int max)
+{
+    double[,] array=new double[row,column];
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < column; j++)
+        {
+            array[i,j]= new Random().Next(min,max+1) + new Random().NextDouble() ;
+            array[i,j]= Math.Round(array[i,j],2);
+            Console.Write($"{array[i, j]}  ");   
+
+        }
+        Console.WriteLine();
+    }
+    return array;
+}
+
+Console.Write("input array row: ");
+int row = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("input array column: ");
+int column = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("input min of elements: ");
+int min = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("input max of elements: ");
+int max = Convert.ToInt32(Console.ReadLine());
+
+double[,] matrix=CreatArray2double(row,column,min,max);
+
+Console.WriteLine();
+*/
+
+//Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, 
+//и возвращает значение этого элемента или же указание, что такого элемента нет.
+Console.WriteLine("Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве,..");
+void PrintArray(int[,] matr)
+{
+    for (int i = 0; i < matr.GetLength(0); i++)
+ {
+ for (int j = 0; j < matr.GetLength(1); j++)
+ {
+ Console.Write($"{matr[i, j]} ");
+ }
+ Console.WriteLine();
+ }
+}
+
+void FillArray(int[,] matr)
+{
+    for (int i = 0; i < matr.GetLength(0); i++)
+    {
+        for (int j = 0; j < matr.GetLength(1); j++)
+        {
+            matr[i,j]= new Random().Next(1,10);
+        }
+    }
+}
+
+void ShowArrayElemet (int[,] matr)
+{
+Console.Write("input  find  row: ");
+int row = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("input find column: ");
+int column = Convert.ToInt32(Console.ReadLine());
+    if (row>0 && row-1<matr.GetLength(0)  && column-1<matr.GetLength(1) && column>0)
+    Console.WriteLine ($"Find elements: {matr[row-1,column-1]}");
+    else Console.WriteLine ("Incorect enter row or column!!!");
+}
+
+int[,] matrix2=new int[4,3];
+FillArray(matrix2);
+Console.WriteLine("This is matrix:");
+PrintArray(matrix2);
+ShowArrayElemet(matrix2);
+
+
+//Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+Console.WriteLine("Задача 52 Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.");
+void srednColumns(int[,] matr)
+{
+    double  sum= 0;
+    Console.WriteLine("Sredn:");
+ for (int j = 0; j < matr.GetLength(1); j++)
+    {
+        for (int i = 0; i < matr.GetLength(0); i++)
+        {
+            sum+=matr[i,j];
+        }
+        Console.Write($"{sum/matr.GetLength(0)} ");
+        sum=0;
+    }
+}
+
+int[,] matrix3=new int[4,3];
+FillArray(matrix3);
+Console.WriteLine("This is matrix:");
+PrintArray(matrix3);
+srednColumns(matrix3);
+
