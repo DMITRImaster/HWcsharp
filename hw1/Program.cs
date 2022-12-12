@@ -460,9 +460,44 @@ void srednColumns(int[,] matr)
     }
 }
 
-int[,] matrix3=new int[4,3];
+int[,] matrix3=new int[3,5];
 FillArray(matrix3);
 Console.WriteLine("This is matrix:");
 PrintArray(matrix3);
 srednColumns(matrix3);
+
+
+
+//Задача 54: Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива.
+Console.WriteLine();
+Console.WriteLine("Задача 54: Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива");
+
+void roundMatr(int[,] matr)
+{
+    int min=matr[0,0];
+    int temp= 0;
+   
+ for (int i = 0; i < matr.GetLength(0); i++)
+    {
+        for (int k = 0; k < matr.GetLength(1)-1; k++)
+        {
+        for (int j = 0; j < matr.GetLength(1)-1; j++)
+        { 
+         if (matr[i,j+1]>matr[i,j])  
+         {temp=matr[i,j];
+         matr[i,j]=matr[i,j+1];
+         matr[i,j+1]=temp;
+         } 
+
+        }
+        }
+        
+    }
+    PrintArray(matr);
+}
+
+roundMatr(matrix3);
+
+//Задача 56: Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов.
+
 
